@@ -1,7 +1,13 @@
 @font-face {
     font-family: "edosz";
-    src: url("/lockdown-news/pages/assets/fonts/edosz.ttf");
+    src: url("/assets/fonts/edosz.ttf");
 }
+
+@font-face {
+    font-family: "edosz";
+    src: url("../fonts/edosz.ttf");
+}
+
 
 @font-face {
     font-family: "Rotunda-Black";
