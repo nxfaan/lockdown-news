@@ -1,8 +1,43 @@
+@font-face {
+    font-family: "edosz";
+    src: url("/img/fonts/edosz.ttf");
+}
+
+@font-face {
+    font-family: "Rotunda-Black";
+    src: url("/img/fonts/Rotunda-Black.otf");
+}
+
+@font-face {
+    font-family: "Rotunda-BlackItalic";
+    src: url("/img/fonts/Rotunda-BlackItalic.otf");
+}
+
+@font-face {
+    font-family: "Rotunda-Bold";
+    src: url("/img/fonts/Rotunda-Bold.otf");
+}
+
+@font-face {
+    font-family: "Rotunda-ExtraBold";
+    src: url("/img/fonts/Rotunda-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "Rotunda-Light";
+    src: url("/img/fonts/Rotunda--Light.otf");
+}
+
+@font-face {
+    font-family: "Rotunda-Regular";
+    src: url("/img/fonts/Rotunda-Regular.otf");
+}
+
 
 
 body {
     background: #000;
-    font-family:Rotunda-Regular;
+    font-family: Rotunda-Regular;
     color: white;
 
 }
@@ -38,7 +73,7 @@ h6 {
 }
 
 h2 {
-    line-height: 23px
+    line-height: 23px;
 }
 
 img {
@@ -175,7 +210,7 @@ img:hover {
 
 .top_nav {
     text-align: left;
-    font-family:edosz;
+    font-family: edosz;
 }
 
 .top_nav li {
@@ -208,11 +243,8 @@ img:hover {
 
 .header_top_right>p {
     color: #000;
-    display: inline-block;
-    font: bold 12px sans-serif;
+
     margin-bottom: 0;
-    padding-bottom: 20px;
-    padding-right: 8px;
     padding-top: 20px
 }
 
@@ -228,7 +260,7 @@ img:hover {
     display: inline;
     float: left;
     width: 30%;
-    top:5%;
+    top: 5%;
 }
 
 .logo {
@@ -629,7 +661,8 @@ img:hover {
     display: inline;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #000;}
+    background-color: #000;
+}
 
 .single_post_content>h2 {
     background: none repeat scroll 0 0 #000;
@@ -677,7 +710,7 @@ img:hover {
 
 .bsbig_fig figcaption {
     color: #000;
-    font-family: "Edo", sans-serif;
+    font-family: "Edosz", sans-serif;
     font-size: 23px;
     font-weight: 300;
     margin-top: 10px;
@@ -1503,15 +1536,15 @@ figure.effect-layla:hover img {
         width: 32.3%
     }
 
-    .add_banner{
-        display:none;
+    .add_banner {
+        display: none;
     }
 
     .photograph_nav li {
         width: 31.5%
     }
 
-    .header_top_right{
+    .header_top_right {
         display: none;
     }
 
@@ -1702,3 +1735,4 @@ figure.effect-layla:hover img {
             width: 32.1%
         }
     }
+}
