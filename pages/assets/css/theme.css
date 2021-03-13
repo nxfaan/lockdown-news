@@ -5,18 +5,18 @@
 
 .scrollToTop:hover,
 .scrollToTop:focus {
-    background-color: #ffffff;
-    color: #02bed6;
-    border-color: 1px solid #02bed6;
+    background-color: #fff;
+    color: #d083cf;
+    border-color: 1px solid #02bed6
 }
 
 .logo>span {
-    color: #02bed6;
+    color: #02bed6
 }
 
 .navbar-inverse .navbar-nav>li>a:hover,
 .navbar-inverse .navbar-nav>li>a:focus {
-    background-color: #02bed6;
+    background-color: #02bed6
 }
 
 .navbar-inverse .navbar-nav>.active>a,
@@ -56,7 +56,8 @@
 }
 
 #prev-button {
-    color: #02bed6;}
+    color: #02bed6
+}
 
 #next-button {
     color: #02bed6
@@ -103,11 +104,12 @@
 
 .tag_nav li a:hover {
     color: #02bed6;
-    border-color: #02bed6;
+    border-color: #02bed6
 }
 
 .copyright a:hover {
-    color: #02bed6}
+    color: #02bed6
+}
 
 .post_commentbox a:hover,
 .post_commentbox span:hover {
@@ -174,4 +176,5 @@
 .form-control:focus {
     border-color: #02bed6;
     box-shadow: 0 0px 1px #02bed6 inset, 0 0 5px #02bed6
+    
 }

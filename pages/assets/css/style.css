@@ -1,6 +1,10 @@
+
+
 body {
     background: #000;
     font-family:Rotunda-Regular;
+    color: white;
+
 }
 
 ul {
@@ -11,11 +15,11 @@ ul {
 
 a {
     text-decoration: none;
-    color: #2f2f2f
+    color: #fff
 }
 
 a:hover {
-    color: #646464;
+    color: #02bed6;
     text-decoration: none
 }
 
@@ -62,6 +66,7 @@ img:hover {
     margin-right: auto
 }
 
+
 .btn {
     border-radius: 0;
     margin-bottom: 5px;
@@ -72,22 +77,22 @@ img:hover {
 
 
 .default-btn {
-    background-color: #12a3df;
+    background-color: #fff;
     color: #fff
 }
 
 .default-btn:hover {
-    background-color: #02bed6;
+    background-color: #0a8ec4;
     color: #fff
 }
 
 .btn-theme {
-    background-color: #02bed6;
+    background-color: #d083cf;
     color: #fff
 }
 
 .btn-theme:hover {
-    background-color: #02bed6;
+    background-color: #ce39cc;
     color: #fff
 }
 
@@ -169,7 +174,8 @@ img:hover {
 }
 
 .top_nav {
-    text-align: left
+    text-align: left;
+    font-family:edosz;
 }
 
 .top_nav li {
@@ -183,7 +189,6 @@ img:hover {
     font-size: 14px;
     font-weight: bold;
     padding: 20px 15px;
-    font-family: edosz;
     text-transform: uppercase;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -202,7 +207,7 @@ img:hover {
 }
 
 .header_top_right>p {
-    color: #fff;
+    color: #000;
     display: inline-block;
     font: bold 12px sans-serif;
     margin-bottom: 0;
@@ -222,13 +227,15 @@ img:hover {
 .logo_area {
     display: inline;
     float: left;
-    width: 31%
+    width: 30%;
+    top:5%;
 }
 
 .logo {
     font-size: 45px;
     font-weight: bold;
     color: #000;
+    font-family: 'Edosz', sans-serif
 }
 
 .logo img {
@@ -259,24 +266,23 @@ img:hover {
     display: inline;
     width: 100%;
     padding: 0 30px;
-    background-color: #000;
+    background-color: #000
 }
 
 .navbar {
     border: medium none;
     border-radius: 0;
-    background-color:#000;
+    background: #000;
 }
 
 .navbar-inverse .navbar-nav>li>a {
     border-left: 1px solid #000;
-    color: #ddd;
+    color: #fff;
     font-family: 'edosz', sans-serif;
     display: inline-block;
     height: 50px;
     line-height: 50px;
     padding: 0 14px;
-    text-shadow: 0 1px 1px #000;
     text-transform: uppercase;
     -webkit-transition: all 0.5s;
     -mz-transition: all 0.5s;
@@ -320,7 +326,7 @@ img:hover {
 
 .dropdown-menu>li>a {
     clear: both;
-    color: #fff;
+    color: #ddd;
     background-color: #000;
     padding: 10px 20px;
     font-family: 'edosz', sans-serif;
@@ -333,7 +339,7 @@ img:hover {
 
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
-    color: #000
+    color: #fff
 }
 
 #newsSection {
@@ -350,7 +356,7 @@ img:hover {
     display: inline;
     width: 100%;
     background-color: #000;
-    position: relative;
+    position: relative
 }
 
 .latest_newsarea span {
@@ -447,7 +453,7 @@ img:hover {
 .social_nav li.mail a:hover {
     background-position: -240px 0px;
     background-size: 270px 60px;
-    background-color: #02bed6
+    background-color: #bc75d6
 }
 
 #sliderSection {
@@ -522,15 +528,15 @@ img:hover {
 
 .slick-prev,
 .slick-next {
-    background-color: #000;
-    top: 10%;
+    background-color: #02bed6;
+    top: 7%;
     width: 40px;
     height: 40px
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-    background-color: #02bed6;
+    opacity: 1
 }
 
 .latest_post {
@@ -622,13 +628,13 @@ img:hover {
     float: left;
     display: inline;
     width: 100%;
-    margin-bottom: 20px
-}
+    margin-bottom: 20px;
+    background-color: #000;}
 
 .single_post_content>h2 {
     background: none repeat scroll 0 0 #000;
     color: #fff;
-    font-family: 'edosz', sans-serif;
+    font-family: 'Edosz', sans-serif;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
@@ -651,7 +657,6 @@ img:hover {
     width: 49%
 }
 
-
 .business_catgnav li {
     float: left;
     display: block;
@@ -672,7 +677,7 @@ img:hover {
 
 .bsbig_fig figcaption {
     color: #000;
-    font-family: "edosz", sans-serif;
+    font-family: "Edo", sans-serif;
     font-size: 23px;
     font-weight: 300;
     margin-top: 10px;
@@ -710,7 +715,7 @@ img:hover {
 }
 
 .spost_nav .media-body>a {
-    font-family: "Rotunda-Regular", sans-serif
+    font-family: "Edosz", sans-serif
 }
 
 .featured_img {
@@ -858,7 +863,8 @@ figure.effect-layla:hover img {
     float: left;
     display: inline;
     width: 100%;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    background-color: #000;
 }
 
 .single_sidebar>h2 {
@@ -881,8 +887,8 @@ figure.effect-layla:hover img {
 }
 
 .cat-item a {
-    background: none repeat scroll 0 0 #e4e4e4;
-    color: #02bed6;
+    background: none repeat scroll 0 0 #000;
+    color: #888;
     display: block;
     float: left;
     border-bottom: none !important;
@@ -935,6 +941,13 @@ figure.effect-layla:hover img {
     border: none
 }
 
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    border-width: 0;
+    border-color: #ddd #ddd transparent;
+    color: #fff
+}
 
 .vide_area {
     float: left;
@@ -974,7 +987,7 @@ figure.effect-layla:hover img {
 
 .footer_top {
     background-color: #000;
-    color: #ddd;
+    color: #000;
     display: inline;
     float: left;
     padding: 10px 30px 48px;
@@ -990,12 +1003,11 @@ figure.effect-layla:hover img {
 
 .footer_widget>h2 {
     border-bottom: 3px solid #666;
-    font-family: edosz;
+    font-family: edosz, arial, Georgia, serif;
     font-size: 16px;
     padding: 10px 0;
     text-transform: uppercase
 }
-
 
 .tag_nav li a {
     border-bottom: 1px solid #ddd;
@@ -1017,19 +1029,18 @@ figure.effect-layla:hover img {
     width: 100%;
     padding: 10px 30px;
     background-color: #000;
-    color: #ccc
+    color: #fff
 }
 
 .copyright {
     float: left;
     width: 50%;
     padding-top: 5px;
-    text-align: left;
-    color:#fff;
+    text-align: left
 }
 
 .copyright a {
-    color: #fff
+    color: #ccc
 }
 
 .developer {
@@ -1146,7 +1157,7 @@ figure.effect-layla:hover img {
 }
 
 .breadcrumb li a {
-    color: #000
+    color: #fff
 }
 
 .single_page_content {
@@ -1276,7 +1287,7 @@ figure.effect-layla:hover img {
 }
 
 .related_post>h2 {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #e3e3e3;
     padding-bottom: 5px
 }
 
@@ -1444,7 +1455,7 @@ figure.effect-layla:hover img {
 }
 
 .contact_area>h2 {
-    color: #000;
+    color: #fff;
     display: inline-block;
     font-size: 20px;
     padding: 7px 10px 5px;
@@ -1483,11 +1494,15 @@ figure.effect-layla:hover img {
     }
 
     .add_banner {
-        display:none;
+        width: 580px
     }
 
     .nav-tabs>li {
         width: 32.3%
+    }
+
+    .add_banner{
+        display:none;
     }
 
     .photograph_nav li {
@@ -1680,4 +1695,4 @@ figure.effect-layla:hover img {
         .nav-tabs>li {
             width: 32.1%
         }
-    }}
+    }

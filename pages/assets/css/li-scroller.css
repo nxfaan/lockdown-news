@@ -23,7 +23,7 @@
 ul.newsticker {
     position: relative;
     left: 750px;
-    font-family: Rotunda-Regular;
+    font:Rotunda-Regular;
     list-style-type: none;
     margin: 0;
     padding: 0
