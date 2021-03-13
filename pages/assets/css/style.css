@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "edosz";
-    src: url("/assets/fonts/edosz.ttf");
-}
+
 
 @font-face {
     font-family: "edosz";
@@ -36,7 +33,7 @@
 
 @font-face {
     font-family: "Rotunda-Regular";
-    src: url("/img/fonts/Rotunda-Regular.otf");
+    src: url("../fonts/Rotunda-Regular.otf");
 }
 
 
