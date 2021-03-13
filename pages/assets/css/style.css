@@ -1335,6 +1335,8 @@ figure.effect-layla:hover img {
     display: inline-block
 }
 
+
+
 .nav-slit div {
     position: absolute;
     top: 0;
@@ -1507,6 +1509,10 @@ figure.effect-layla:hover img {
 
     .photograph_nav li {
         width: 31.5%
+    }
+
+    .header_top_right{
+        display: none;
     }
 
     @media(max-width:991px) {

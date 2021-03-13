@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body onLoad="initClock()">
   <div id="preloader">
     <div id="status">&nbsp;</div>
   </div>
@@ -37,17 +37,36 @@
               </ul>
             </div>
             <div class="header_top_right">
-              <p>Friday, December 05, 2045</p>
+              <div id="timedate">
+                <a id="mon">January</a>
+                <a id="d">1</a>,
+                <a id="y">0</a>
+                <a id="h">12</a> :
+                <a id="m">00</a>
+
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="header_bottom">
             <div class="logo_area"><a href="index.html" class="logo"><img src="images/logo.png" alt=""></a></div>
-            <div class="add_banner"><a class="weatherwidget-io" href="https://forecast7.com/en/55d38n3d44/united-kingdom/" data-label_1="UNITED KINGDOM" data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-theme="dark" >UNITED KINGDOM WEATHER</a>
+            <div class="add_banner"><a class="weatherwidget-io"
+                href="https://forecast7.com/en/55d38n3d44/united-kingdom/" data-label_1="UNITED KINGDOM"
+                data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-theme="dark">UNITED
+                KINGDOM WEATHER</a>
               <script>
-              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-              </script></div>
+                ! function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = 'https://weatherwidget.io/js/widget.min.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }
+                }(document, 'script', 'weatherwidget-io-js');
+              </script>
+            </div>
           </div>
         </div>
       </div>
@@ -339,7 +358,7 @@
                 </div>
               </div>
             </div>
-          
+
             <div class="single_post_content">
               <h2><span>Games</span></h2>
               <div class="single_post_content_left">
@@ -492,7 +511,7 @@
               <a class="sideAdd" href="#"><img src="images/add_img.jpg" alt=""></a>
             </div>
 
-           
+
           </aside>
         </div>
       </div>
@@ -504,233 +523,332 @@
             <svg id="svg" viewBox="0 0 500 500" width="100%" z-index="-100" max-height="100%">
               <defs>
                 <g class="combination-input-template">
-                  <rect x=-25 y=-40 width=50 height=80
-                        fill="none" stroke="white"
-                        stroke-width=2 rx="3"/>
-                  <text class="text-value" x=0 y=13
-                        font-size="36"
-                        fill="white"
-                        text-anchor="middle">
+                  <rect x=-25 y=-40 width=50 height=80 fill="none" stroke="white" stroke-width=2 rx="3" />
+                  <text class="text-value" x=0 y=13 font-size="36" fill="white" text-anchor="middle">
                     0
                   </text>
-                  <path d="M0 -32 l5 10 l-10 0 z" fill="white"/>
-                  <path d="M0 32 l5 -10 l-10 0 z" fill="white"/>
-                  <rect class="up-button" x=-25 y=-40
-                        width=50 height=40
-                        fill="transparent"/>
-                  <rect class="down-button" x=-25 y=0
-                        width=50 height=40
-                        fill="transparent"/>
+                  <path d="M0 -32 l5 10 l-10 0 z" fill="white" />
+                  <path d="M0 32 l5 -10 l-10 0 z" fill="white" />
+                  <rect class="up-button" x=-25 y=-40 width=50 height=40 fill="transparent" />
+                  <rect class="down-button" x=-25 y=0 width=50 height=40 fill="transparent" />
                 </g>
               </defs>
               <g id="padlock" transform="translate(250,220)">
-                <rect id='box' x=-60 y=-45
-                      width=120 height=90
-                      rx=5
-                      fill="hsl(120,50%,100%)"/>
+                <rect id='box' x=-60 y=-45 width=120 height=90 rx=5 fill="hsl(120,50%,100%)" />
                 <path id="bar" d="M-35 -45
                          v-40
                          c 0 -40, 70 -40, 70,0
-                         v80"
-                      stroke-width=18
-                      stroke-linecap="round"
-                      fill="none"
-                      stroke="hsl(120,50%,100%)"/>
+                         v80" stroke-width=18 stroke-linecap="round" fill="none" stroke="hsl(120,50%,100%)" />
               </g>
               <g id="unlock-button" transform="translate(250,450)">
-                <text x=0 y=6
-                      font-size="16"
-                                cursor="pointer"
-                      fill="white"
-                      text-anchor="middle">
+                <text x=0 y=6 font-size="16" cursor="pointer" fill="white" text-anchor="middle">
                   unlock
                 </text>
-                <rect x=-50 y=-20 width=100 height=40
-                      fill="transparent" stroke="white"
-                      stroke-width=2 rx="3"/>
+                <rect x=-50 y=-20 width=100 height=40 fill="transparent" stroke="white" stroke-width=2 rx="3" />
               </g>
-              <text id="response-text" x=50% y=360
-                    font-size="50"
-                    fill="white"
-                    text-anchor="middle"
-                    opacity=0>
+              <text id="response-text" x=50% y=360 font-size="50" fill="white" text-anchor="middle" opacity=0>
                 correct
               </text>
               <g id="combination-input-container" transform="translate(250,365)">
               </g>
             </svg>
             <!-- partial -->
-              <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
-            
-            </body>
-            
-            
-            <script>
-            const padlock = document.getElementById('padlock');
-            const bar = document.getElementById('bar');
-            const combinationInputTemplate = document.querySelector('.combination-input-template');
-            const combinationInputContainer = document.getElementById('combination-input-container');
-            const unlockButton = document.getElementById('unlock-button');
-            const responseText = document.getElementById('response-text');
-            
-            const inputWidth = 60;
-            let comboArray = [2, 8, 1, 2];
-            
-            let lockRestingColor;
-            
-            TweenMax.set('#padlock', { transformOrigin: '50% 50%' });
-            
-            const searchParams = {};
-            window.location.search.replace('?', '').split('&').forEach(x => {const a = x.split('=');searchParams[a[0]] = a[1];});
-            if (searchParams['h']) {
-              let number = parseInt(searchParams['h'], 16);
-              if (!isNaN(number)) {
-                comboArray = (number + '').split('').map(x => parseInt(x, 10));
-              }
-            }
-            
-            for (let i = 0; i < comboArray.length; i++) {
-              const clone = combinationInputTemplate.cloneNode(true);
-            
-              const x = i * inputWidth - (comboArray.length - 1) * inputWidth / 2;
-              clone.setAttribute('transform', `translate(${x},0)`);
-              clone.setAttribute('class', 'combination-input');
-            
-              combinationInputContainer.appendChild(clone);
-            }
-            
-            unlockButton.onclick = () => {
-              if (checkCombination()) {
-                startUnlockAttempt(() => {
-                  const tl = new TimelineMax({ onComplete: finishUnlockAttempt });
-                  lockRestingColor = 'hsl(120,50%,100%)';
-                  responseText.innerHTML = 'correct';
-            
-                  tl.to('#box', 0, { fill: lockRestingColor });
-                  tl.to('#bar', 0, { stroke: lockRestingColor });
-                  tl.to('#bar', 0.3, { y: -20, ease: Back.easeOut.config(4) }, 'b');
-                  tl.to('#padlock', 0.3, { scale: 1.2, ease: Back.easeOut.config(4) }, 'b');
-                  tl.to('#box', 0.3, { fill: '#6eb4cb' }, 'b');
-                  tl.to('#bar', 0.3, { stroke: '#6eb4cb' }, 'b');
-            
-            
-                  setTimeout(function(TimelineMax){
-                   window.location.href = '/';
-                }, 3000);
-                });
-              } else {
-                startUnlockAttempt(() => {
-                  const tl = new TimelineMax({ onComplete: finishUnlockAttempt });
-                  lockRestingColor = 'hsl(0,50%,100%)';
-                  responseText.innerHTML = 'try again';
-            
-                  tl.to('#box', 0, { fill: lockRestingColor });
-                  tl.to('#bar', 0, { stroke: lockRestingColor });
-                  tl.to('#bar', 0.1, { y: 0, ease: Power0.easeNone }, 'b');
-                  tl.to('#padlock', 0.1, { scale: 1, ease: Power0.easeNone }, 'b');
-                  tl.to('#box', 0.1, { fill: '#d53f63' }, 'b');
-                  tl.to('#bar', 0.1, { stroke: '#d53f63' }, 'b');
-                  tl.to('#padlock', 0.1, { x: 260 });
-                  tl.to('#padlock', 0.1, { x: 240 });
-                  tl.to('#padlock', 0.1, { x: 260 });
-                  tl.to('#padlock', 0.1, { x: 250 });
-                });
-              }
-            };
-            
-            const startUnlockAttempt = onComplete => {
-              const tl = new TimelineMax({ onComplete });
-            
-              tl.to('#unlock-button', 0.5, { y: 550, opacity: 0, ease: Power2.easeInOut }, 'a');
-              tl.staggerTo('.combination-input', 0.5, { y: 200, opacity: 0, ease: Power2.easeInOut }, 0.1, 'a+=0.25');
-              tl.to('#padlock', 0.5, { y: 250, ease: Power2.easeInOut });
-            
-              tl.to('#padlock', 1, { scale: 0.9 }, 'build');
-              tl.to('#bar', 1, { y: 10 }, 'build');
-            };
-            
-            const finishUnlockAttempt = () => {
-              const tl = new TimelineMax();
-            
-              tl.to('#response-text', 0.5, { y: 30, opacity: 1 });
-              tl.to('#response-text', 2, {});
-              tl.to('#response-text', 0.5, { y: 0, opacity: 0 });
-              tl.to('#box', 0.25, { fill: lockRestingColor, ease: Power2.easeInOut }, 'a');
-              tl.to('#bar', 0.25, { stroke: lockRestingColor, y: 0, ease: Power2.easeInOut }, 'a');
-              tl.to('#padlock', 0.25, { scale: 1, y: 220 }, 'a');
-              tl.to('#unlock-button', 0.5, { y: 450, opacity: 1 }, 'b');
-              tl.staggerTo('.combination-input', 0.5, { y: 0, opacity: 1 }, 0.1, 'b+=0.25');
-            };
-            
-            const delegateFunction = e => {
-              if (e.target.matches('.up-button')) {
-                const text = e.target.parentElement.querySelector('.text-value');
-                text.innerHTML = rollOver(parseInt(text.innerHTML) + 1);
-              } else if (e.target.matches('.down-button')) {
-                const text = e.target.parentElement.querySelector('.text-value');
-                text.innerHTML = rollOver(parseInt(text.innerHTML) - 1);
-              }
-            };
-            
-            const rollOver = val => {
-              if (val > 9) {
-                return val % 10;
-              }if (val < 0) {
-                return val + 10;
-              }
-              return val;
-            };
-            
-            const checkCombination = () => {
-              const inputs = document.querySelectorAll('.combination-input .text-value');
-              let valid = true;
-            
-              for (let i = 0; i < inputs.length; i++) {
-                if (parseInt(inputs[i].innerHTML) !== comboArray[i]) {
-                  valid = false;
-                }
-              }
-            
-              return valid;
-            };
-            
-            document.onmouseup = delegateFunction;
-            document.ontouchend = delegateFunction;
-            
-             
-            </script>
-            
-            <style>
-            
-            
-            text {
-              user-select: none;
-              font-family: edosz;
-            }
-            
-            
-            svg{
-              z-index:-1px !important;
-            }
-            </style>
-            </html>
-          </div>
-        </div>
-      </div>
-      <div class="footer_bottom">
-        <p class="copyright">&copy; 2021 <a href="index.html">Lockdown.uk</a></p>
-        <p class="developer">Developed By <a href="index.html">Nate.Digital</a></p>
-      </div>
-    </footer>
-  </div>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/slick.min.js"></script>
-  <script src="assets/js/jquery.li-scroller.1.0.js"></script>
-  <script src="assets/js/jquery.newsTicker.min.js"></script>
-  <script src="assets/js/jquery.fancybox.pack.js"></script>
-  <script src="assets/js/custom.js"></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+
+</body>
+
+
+<script>
+  const padlock = document.getElementById('padlock');
+  const bar = document.getElementById('bar');
+  const combinationInputTemplate = document.querySelector('.combination-input-template');
+  const combinationInputContainer = document.getElementById('combination-input-container');
+  const unlockButton = document.getElementById('unlock-button');
+  const responseText = document.getElementById('response-text');
+
+  const inputWidth = 60;
+  let comboArray = [2, 8, 1, 2];
+
+  let lockRestingColor;
+
+  TweenMax.set('#padlock', {
+    transformOrigin: '50% 50%'
+  });
+
+  const searchParams = {};
+  window.location.search.replace('?', '').split('&').forEach(x => {
+    const a = x.split('=');
+    searchParams[a[0]] = a[1];
+  });
+  if (searchParams['h']) {
+    let number = parseInt(searchParams['h'], 16);
+    if (!isNaN(number)) {
+      comboArray = (number + '').split('').map(x => parseInt(x, 10));
+    }
+  }
+
+  for (let i = 0; i < comboArray.length; i++) {
+    const clone = combinationInputTemplate.cloneNode(true);
+
+    const x = i * inputWidth - (comboArray.length - 1) * inputWidth / 2;
+    clone.setAttribute('transform', `translate(${x},0)`);
+    clone.setAttribute('class', 'combination-input');
+
+    combinationInputContainer.appendChild(clone);
+  }
+
+  unlockButton.onclick = () => {
+    if (checkCombination()) {
+      startUnlockAttempt(() => {
+        const tl = new TimelineMax({
+          onComplete: finishUnlockAttempt
+        });
+        lockRestingColor = 'hsl(120,50%,100%)';
+        responseText.innerHTML = 'correct';
+
+        tl.to('#box', 0, {
+          fill: lockRestingColor
+        });
+        tl.to('#bar', 0, {
+          stroke: lockRestingColor
+        });
+        tl.to('#bar', 0.3, {
+          y: -20,
+          ease: Back.easeOut.config(4)
+        }, 'b');
+        tl.to('#padlock', 0.3, {
+          scale: 1.2,
+          ease: Back.easeOut.config(4)
+        }, 'b');
+        tl.to('#box', 0.3, {
+          fill: '#6eb4cb'
+        }, 'b');
+        tl.to('#bar', 0.3, {
+          stroke: '#6eb4cb'
+        }, 'b');
+
+
+        setTimeout(function (TimelineMax) {
+          window.location.href = '/';
+        }, 3000);
+      });
+    } else {
+      startUnlockAttempt(() => {
+        const tl = new TimelineMax({
+          onComplete: finishUnlockAttempt
+        });
+        lockRestingColor = 'hsl(0,50%,100%)';
+        responseText.innerHTML = 'try again';
+
+        tl.to('#box', 0, {
+          fill: lockRestingColor
+        });
+        tl.to('#bar', 0, {
+          stroke: lockRestingColor
+        });
+        tl.to('#bar', 0.1, {
+          y: 0,
+          ease: Power0.easeNone
+        }, 'b');
+        tl.to('#padlock', 0.1, {
+          scale: 1,
+          ease: Power0.easeNone
+        }, 'b');
+        tl.to('#box', 0.1, {
+          fill: '#d53f63'
+        }, 'b');
+        tl.to('#bar', 0.1, {
+          stroke: '#d53f63'
+        }, 'b');
+        tl.to('#padlock', 0.1, {
+          x: 260
+        });
+        tl.to('#padlock', 0.1, {
+          x: 240
+        });
+        tl.to('#padlock', 0.1, {
+          x: 260
+        });
+        tl.to('#padlock', 0.1, {
+          x: 250
+        });
+      });
+    }
+  };
+
+  const startUnlockAttempt = onComplete => {
+    const tl = new TimelineMax({
+      onComplete
+    });
+
+    tl.to('#unlock-button', 0.5, {
+      y: 550,
+      opacity: 0,
+      ease: Power2.easeInOut
+    }, 'a');
+    tl.staggerTo('.combination-input', 0.5, {
+      y: 200,
+      opacity: 0,
+      ease: Power2.easeInOut
+    }, 0.1, 'a+=0.25');
+    tl.to('#padlock', 0.5, {
+      y: 250,
+      ease: Power2.easeInOut
+    });
+
+    tl.to('#padlock', 1, {
+      scale: 0.9
+    }, 'build');
+    tl.to('#bar', 1, {
+      y: 10
+    }, 'build');
+  };
+
+  const finishUnlockAttempt = () => {
+    const tl = new TimelineMax();
+
+    tl.to('#response-text', 0.5, {
+      y: 30,
+      opacity: 1
+    });
+    tl.to('#response-text', 2, {});
+    tl.to('#response-text', 0.5, {
+      y: 0,
+      opacity: 0
+    });
+    tl.to('#box', 0.25, {
+      fill: lockRestingColor,
+      ease: Power2.easeInOut
+    }, 'a');
+    tl.to('#bar', 0.25, {
+      stroke: lockRestingColor,
+      y: 0,
+      ease: Power2.easeInOut
+    }, 'a');
+    tl.to('#padlock', 0.25, {
+      scale: 1,
+      y: 220
+    }, 'a');
+    tl.to('#unlock-button', 0.5, {
+      y: 450,
+      opacity: 1
+    }, 'b');
+    tl.staggerTo('.combination-input', 0.5, {
+      y: 0,
+      opacity: 1
+    }, 0.1, 'b+=0.25');
+  };
+
+  const delegateFunction = e => {
+    if (e.target.matches('.up-button')) {
+      const text = e.target.parentElement.querySelector('.text-value');
+      text.innerHTML = rollOver(parseInt(text.innerHTML) + 1);
+    } else if (e.target.matches('.down-button')) {
+      const text = e.target.parentElement.querySelector('.text-value');
+      text.innerHTML = rollOver(parseInt(text.innerHTML) - 1);
+    }
+  };
+
+  const rollOver = val => {
+    if (val > 9) {
+      return val % 10;
+    }
+    if (val < 0) {
+      return val + 10;
+    }
+    return val;
+  };
+
+  const checkCombination = () => {
+    const inputs = document.querySelectorAll('.combination-input .text-value');
+    let valid = true;
+
+    for (let i = 0; i < inputs.length; i++) {
+      if (parseInt(inputs[i].innerHTML) !== comboArray[i]) {
+        valid = false;
+      }
+    }
+
+    return valid;
+  };
+
+  document.onmouseup = delegateFunction;
+  document.ontouchend = delegateFunction;
+
+  // START CLOCK SCRIPT
+
+  Number.prototype.pad = function (n) {
+    for (var r = this.toString(); r.length < n; r = 0 + r);
+    return r;
+  };
+
+  function updateClock() {
+    var now = new Date();
+    var milli = now.getMilliseconds(),
+      sec = now.getSeconds(),
+      min = now.getMinutes(),
+      hou = now.getHours(),
+      mo = now.getMonth(),
+      dy = now.getDate(),
+      yr = now.getFullYear();
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+      "November", "December"
+    ];
+    var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
+      corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
+    for (var i = 0; i < tags.length; i++)
+      document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+  }
+
+  function initClock() {
+    updateClock();
+    window.setInterval("updateClock()", 1);
+  }
+
+  // END CLOCK SCRIPT 
+</script>
+
+<style>
+  text {
+    user-select: none;
+    font-family: edosz;
+  }
+
+
+  svg {
+    z-index: -1px !important;
+  }
+
+  #timedate {
+    font: edosz;
+    float: right;
+    text-align: left;
+    width: 70%;
+    height: 5%;
+    color: #fff;
+    border-left: 2px solid #02bed6;
+    padding: 10px;
+  }
+</style>
+
+</html>
+</div>
+</div>
+</div>
+<div class="footer_bottom">
+  <p class="copyright">&copy; 2021 <a href="index.html">Lockdown.uk</a></p>
+  <p class="developer">Developed By <a href="index.html">Nate.Digital</a></p>
+</div>
+</footer>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.li-scroller.1.0.js"></script>
+<script src="assets/js/jquery.newsTicker.min.js"></script>
+<script src="assets/js/jquery.fancybox.pack.js"></script>
+<script src="assets/js/custom.js"></script>
 </body>
 
 </html>
