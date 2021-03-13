@@ -1,6 +1,6 @@
 @font-face {
     font-family: "edosz";
-    src: url("lockdown-news/pages/assets/fonts/edosz.ttf");
+    src: url("/lockdown-news/pages/assets/fonts/edosz.ttf");
 }
 
 @font-face {
@@ -69,8 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'edosz', sans-serif
-}
+    font-family: 'edosz'}
 
 h2 {
     line-height: 23px;
@@ -210,7 +209,7 @@ img:hover {
 
 .top_nav {
     text-align: left;
-    font-family: edosz;
+    font-family: "edosz";
 }
 
 .top_nav li {
@@ -267,7 +266,7 @@ img:hover {
     font-size: 45px;
     font-weight: bold;
     color: #000;
-    font-family: 'Edosz', sans-serif
+    font-family: "edosz";
 }
 
 .logo img {
@@ -310,7 +309,7 @@ img:hover {
 .navbar-inverse .navbar-nav>li>a {
     border-left: 1px solid #000;
     color: #fff;
-    font-family: 'edosz', sans-serif;
+    font-family: "edosz";
     display: inline-block;
     height: 50px;
     line-height: 50px;
@@ -361,7 +360,7 @@ img:hover {
     color: #ddd;
     background-color: #000;
     padding: 10px 20px;
-    font-family: 'edosz', sans-serif;
+    font-family: "edosz";
     -webkit-transition: all 0.5s;
     -mz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -393,7 +392,7 @@ img:hover {
 
 .latest_newsarea span {
     color: #fff;
-    font-family: edosz, sans-serif;
+    font-family: "edosz";
     font-size: 15px;
     left: 0;
     line-height: 1.8em;
@@ -580,7 +579,7 @@ img:hover {
 .latest_post>h2 {
     background: none repeat scroll 0 0 #000;
     color: #fff;
-    font-family: 'edosz', sans-serif;
+    font-family: "edosz";
     font-size: 18px;
     margin-top: 5px;
     font-weight: 400;
@@ -667,7 +666,7 @@ img:hover {
 .single_post_content>h2 {
     background: none repeat scroll 0 0 #000;
     color: #fff;
-    font-family: 'Edosz', sans-serif;
+    font-family: "edosz";
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
@@ -710,7 +709,7 @@ img:hover {
 
 .bsbig_fig figcaption {
     color: #000;
-    font-family: "Edosz", sans-serif;
+    font-family: "edosz";
     font-size: 23px;
     font-weight: 300;
     margin-top: 10px;
@@ -748,7 +747,7 @@ img:hover {
 }
 
 .spost_nav .media-body>a {
-    font-family: "Edosz", sans-serif
+    font-family: "edosz";
 }
 
 .featured_img {
@@ -903,7 +902,7 @@ figure.effect-layla:hover img {
 .single_sidebar>h2 {
     background: none repeat scroll 0 0 #000;
     color: #fff;
-    font-family: "edosz", sans-serif;
+    font-family: "edosz";
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
@@ -960,7 +959,7 @@ figure.effect-layla:hover img {
     font-size: 15px;
     border-radius: 0;
     border: none;
-    font-family: "edosz", sans-serif;
+    font-family: "edosz";
     -webkit-transition: all 0.5s;
     -mz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -1036,7 +1035,7 @@ figure.effect-layla:hover img {
 
 .footer_widget>h2 {
     border-bottom: 3px solid #666;
-    font-family: edosz, arial, Georgia, serif;
+    font-family: "edosz";
     font-size: 16px;
     padding: 10px 0;
     text-transform: uppercase
@@ -1154,7 +1153,7 @@ figure.effect-layla:hover img {
 
 .single_page>h1 {
     color: #333;
-    font-family: edosz, arial, Georgia, serif;
+    font-family: "edosz";
     font-size: 30px;
     line-height: 1.4em;
     margin: 10px 0 -10px;
