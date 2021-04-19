@@ -90,7 +90,7 @@
               <li><a href="watcher-jetskijailed.html"><img src="images/jet-ski.jpg" alt="">Man Jailed for Scotland-Isle of Man Water Scooter
                   Crossing</a></li>
               <li><a href="watcher-cashdecline.html"><img src="images/cash.jpg" alt="">Coronavirus will Hasten the Decline of Cash</a></li>
-            </ul>>
+            </ul>
             <div class="social_area">
               <ul class="social_nav">
                 <li class="facebook"><a href="https://www.facebook.com/LockdownUnitedKingdom"></a></li>
@@ -123,35 +123,192 @@
                     class="fa fa-user"></i>Facebook</a> <span><i class="fa fa-calendar"></i>2020</span> <a href="#"><i
                     class="fa fa-tags"></i>World</a>
               </div>
-              <div class="single_page_content"> <img class="img-center" src="images/pigeons.jpg" alt="">
-                <p>It’s no coincidence planes get their design from birds. The little tweeters mastered flying long
-                  before man fancied the skies and we ripped them off big time. Truth is, birds know a thing or two
-                  about soaring the skies and no matter how much plastic DJI throw at a mould, our drone technology just
-                  doesn’t cut it.<br><br>
-                  Until pigeon drones.<br><br>
-                  Pigeon drones hit the government jackpot. Stealth, infiltration, surveillance. Eyes and ears in the
-                  pockets of your everyday lives. Society is waking up to the fact that pigeons are a threat to our
-                  freedom. You’re not just a pawn in the system. Take back your lives.<br><br>
-                </p>
+              <div>
+                <p>A look at what is in a pigeon.</p>
                 <blockquote> Intelligence authorities are utilising biological resources to obtain personal information.
                 </blockquote>
+                <div id="before-after-slider">
+                  <div id="before-image">
+                    <img class="slider"
+                    src="images/Slider1.png"
+                      alt="before" />
+                  </div>
 
-                <p>The strength of the UK’s surveillance system has been hailed as the foundation for identifying mutant
-                  variants.<br><br>
-                  Meanwhile, Test and Trace has been hailed as one of our many downfalls in containing them.
-                  As we all know, the Test and Trace system relies on close communication with other devices, with the
-                  pigeon drone network capturing the data and relaying it back to Government HQ.
-                  So why is the technology failing us?<br><br>
-                  While millions of us downloaded the app, the bigger issue is tracing contacts. How many of you have
-                  received a phone call asking where you’ve been and who’ve you met? No need, because they also have the
-                  drone infrastructure to know. The shortcomings in the system are completely down to the fact that
-                  COVID infections have sky-rocketed beyond all predictions and the pigeons don’t stand a chance of
-                  tracing everyone, especially if you’re asymptomatic.<br><br>
-                  Over-confidence in the technology has acted as a replacement for measures which really work, like
-                  wearing a mask. Of course, facial recognition is much harder this way but we suggest you ditch the
-                  app, and cover your trap.
-                </p>
+                  <div id="after-image">
+                    <img class="slider"
+                    src="images/Slider2.png"
+                      alt="After" />
+                  </div>
 
+                  <div id="resizer"></div>
+
+                  <style>
+                    .line {
+                      width: 100px;
+                      height: 1px;
+                      margin: 20px auto 40px auto;
+                      border-bottom: 1px solid white;
+                    }
+
+                    .slider {
+                      width: 100%;
+                      display: block;
+                    }
+
+
+
+                    #before-after-slider {
+                      width: 100%;
+                      position: relative;
+                      overflow: hidden;
+                      border: 3px solid white;
+                    }
+
+                    #after-image {
+                      display: block
+                    }
+
+                    #before-image {
+                      position: absolute;
+                      height: 100%;
+                      width: 50%;
+                      top: 0;
+                      left: 0;
+                      overflow: hidden;
+                      z-index: 2;
+                    }
+
+                    #resizer {
+                      position: absolute;
+                      display: flex;
+                      align-items: center;
+                      z-index: 5;
+                      top: 0;
+                      left: 50%;
+                      height: 100%;
+                      width: 4px;
+                      background: white;
+                      -ms-touch-action: pan-y;
+                      touch-action: pan-y;
+                    }
+
+                    #resizer:after {
+                      background: #23b8d2;
+                      content: 'o';
+                      font-weight: 900;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      color: white;
+                      position: absolute;
+                      margin: 0 0 0 -22px;
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      border: 3px solid white;
+
+                    }
+
+                    @media (max-width:767px) {
+                      .container {
+                        width: 100%;
+                        padding: 0 20px
+                      }
+                    }
+                  </style>
+
+                  <script>
+                    const slider = document.getElementById('before-after-slider');
+                    const before = document.getElementById('before-image');
+                    const beforeImage = before.getElementsByTagName('img')[0];
+                    const resizer = document.getElementById('resizer');
+
+                    let active = false;
+
+                    //Sort overflow out for Overlay Image
+                    document.addEventListener("DOMContentLoaded", function () {
+                      let width = slider.offsetWidth;
+                      console.log(width);
+                      beforeImage.style.width = width + 'px';
+                    });
+
+                    //Adjust width of image on resize 
+                    window.addEventListener('resize', function () {
+                      let width = slider.offsetWidth;
+                      console.log(width);
+                      beforeImage.style.width = width + 'px';
+                    })
+
+                    resizer.addEventListener('mousedown', function () {
+                      active = true;
+                      resizer.classList.add('resize');
+
+                    });
+
+                    document.body.addEventListener('mouseup', function () {
+                      active = false;
+                      resizer.classList.remove('resize');
+                    });
+
+                    document.body.addEventListener('mouseleave', function () {
+                      active = false;
+                      resizer.classList.remove('resize');
+                    });
+
+                    document.body.addEventListener('mousemove', function (e) {
+                      if (!active) return;
+                      let x = e.pageX;
+                      x -= slider.getBoundingClientRect().left;
+                      slideIt(x);
+                      pauseEvent(e);
+                    });
+
+                    resizer.addEventListener('touchstart', function () {
+                      active = true;
+                      resizer.classList.add('resize');
+                    });
+
+                    document.body.addEventListener('touchend', function () {
+                      active = false;
+                      resizer.classList.remove('resize');
+                    });
+
+                    document.body.addEventListener('touchcancel', function () {
+                      active = false;
+                      resizer.classList.remove('resize');
+                    });
+
+                    //calculation for dragging on touch devices
+                    document.body.addEventListener('touchmove', function (e) {
+                      if (!active) return;
+                      let x;
+
+                      let i;
+                      for (i = 0; i < e.changedTouches.length; i++) {
+                        x = e.changedTouches[i].pageX;
+                      }
+
+                      x -= slider.getBoundingClientRect().left;
+                      slideIt(x);
+                      pauseEvent(e);
+                    });
+
+                    function slideIt(x) {
+                      let transform = Math.max(0, (Math.min(x, slider.offsetWidth)));
+                      before.style.width = transform + "px";
+                      resizer.style.left = transform - 0 + "px";
+                    }
+
+                    //stop divs being selected.
+                    function pauseEvent(e) {
+                      if (e.stopPropagation) e.stopPropagation();
+                      if (e.preventDefault) e.preventDefault();
+                      e.cancelBubble = true;
+                      e.returnValue = false;
+                      return false;
+                    }
+                  </script>
+                </div>
 
               </div>
 
@@ -166,9 +323,10 @@
               <h2><span>Related Posts</span></h2>
               <ul class="spost_nav">
                 <li>
-                  <div class="media wow fadeInDown"> <a href="watcher-billgatescameras.html" class="media-left"> <img alt=""
-                        src="images/securitycameras.png"> </a>
-                    <div class="media-body"> <a href="watcher-billgatescameras.html" class="catg_title"> Bill Gates backs a 1
+                  <div class="media wow fadeInDown"> <a href="watcher-billgatescameras.html" class="media-left"> <img
+                        alt="" src="images/securitycameras.png"> </a>
+                    <div class="media-body"> <a href="watcher-billgatescameras.html" class="catg_title"> Bill Gates
+                        backs a 1
                         billion plan to cover Earth in 'Big Brother' satellites capable of streaming 'live and
                         unfiltered' HD footage of the planet
 
@@ -176,31 +334,31 @@
                   </div>
                 </li>
                 <li>
-                  <div class="media wow fadeInDown"> <a href="watcher-pigeonsleep.html" class="media-left"> <img alt=""
+                  <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt=""
                         src="images/pigeonsleep.jpg"> </a>
-                    <div class="media-body"> <a href="watcher-pigeonsleep.html" class="catg_title"> Night lights cause severe
+                    <div class="media-body"> <a href="single_page.html" class="catg_title"> Night lights cause severe
                         loss of sleep for pigeons and magpies</a> </div>
                   </div>
                 </li>
                 <li>
                   <div class="media wow fadeInDown"> <a href="watcher-deathstones.html" class="media-left"> <img alt=""
                         src="images/stones.jpg"> </a>
-                    <div class="media-body"> <a href="watcher-deathstones.html" class="catg_title"> One of the US biggest mysteries</a> </div>
+                    <div class="media-body"> <a href="watcher-deathstones.html" class="catg_title"> One of the US
+                        biggest mysteries</a> </div>
                   </div>
                 </li>
                 <li>
-                  <div class="media wow fadeInDown"> <a href="watcher-whatisinapigeon.html" class="media-left"> <img alt=""
-                        src="images/whats-in-pigeon.jpg"> </a>
-                    <div class="media-body"> <a href="watcher-whatisinapigeon.html" class="catg_title"> What is in a Pigeon?</a> </div>
+                  <div class="media wow fadeInDown"> <a href="watcher-whatisinapigeon.html" class="media-left"> <img
+                        alt="" src="images/p"> </a>
+                    <div class="media-body"> <a href="watcher-whatisinapigeon.html" class="catg_title"> What is in a
+                        Pigeon?</a> </div>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="single_sidebar wow fadeInDown">
               <h2><span>Sponsor</span></h2>
-              <a class="sideAdd"
-                href="watcher-advert.html"><img
-                  src="images/add_img.jpg" alt=""></a>
+              <a class="sideAdd" href="watcher-advert.html"><img src="images/add_img.jpg" alt=""></a>
             </div>
 
 
@@ -244,7 +402,6 @@
               <g id="combination-input-container" transform="translate(250,365)">
               </g>
             </svg>
-            <!-- partial -->
             <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
 
 </body>
